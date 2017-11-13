@@ -15,12 +15,12 @@
 */
 
  char ** parse_args( char * x ){
-   char * line = x;
+   char *line = x;
    char ** args = calloc(5, sizeof(char *));
    int i = 0;
    printf("while loop -------\n");
    // while(line){
-     args[i] = strsep(&line, " ");
+   args[i] = strsep(&line, " ");
    //   i++;
    // }
    printf("while end----------\n");
