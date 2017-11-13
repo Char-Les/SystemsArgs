@@ -16,7 +16,7 @@
 
 char ** parse_args(char * line){
   char ** args = calloc(5, sizeof(char *));;
-  int i = 0;
+  int i = -1;
   while(i++ < 5){
     args[i] = strsep(&line, " ");
   }
