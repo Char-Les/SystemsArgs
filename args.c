@@ -15,7 +15,7 @@
 */
 
 char ** parse_args(char * line){
-  char * s1 = line;
+  char s1[30] = line;
   char ** args = calloc(5, sizeof(char *));;
   int i = 0;
   while(i<5){
@@ -32,7 +32,8 @@ int main() {
   printf("[%s]\n", strsep(&s1, "-"));
   printf("[%s]\n", s1);
 
-  char ** x = (char **) parse_args("ls -a -l");
+  char test[] = "ls -a -l";
+  char ** x = (char **) parse_args(test);
   printf("%s %s %s   \n", x[0], x[1], x[2]);
   // execvp(x[0], x);
 }
