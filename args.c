@@ -14,11 +14,12 @@
   HW 11 - Don't Get Argumentative
 */
 
- char ** parse_args( char * line ){
+ char ** parse_args( char * x ){
+   char * line = x;
    char ** args = calloc(5, sizeof(char *));
    int i = 0;
    while(i < 5){
-     args[i] = (char *) strsep(&line, " ");
+     args[i] = (char *) strsep(line, " ");
      i++;
    }
    return args;
@@ -26,6 +27,6 @@
 
 int main() {
   char ** x = (char **) parse_args("ls -a -l");
-  printf("%s %s %s\n", x[0], x[1], x[2]);
+  printf("%s %s %s   \n", x[0], x[1], x[2]);
   // execvp(x[0], x);
 }
