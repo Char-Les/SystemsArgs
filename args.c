@@ -15,23 +15,25 @@
 */
 
 char ** parse_args(char * line){
+  // make space for the array
   char ** args = calloc(5, sizeof(char *));;
+  // parse into array
   int i = -1;
-  while(i++ < 5){
+  while(i++ < 5)
     args[i] = strsep(&line, " ");
-  }
   return args;
 }
 
 int main() {
-  // given tests
+  // given example
   char line[100] = "wow-this-is-cool";
   char *s1 = line;
   printf("[%s]\n", strsep(&s1, "-"));
   printf("[%s]\n", s1);
 
+  // the test
   char test[] = "ls -a -l";
   char ** x = (char **) parse_args(test);
-  printf("%s %s %s   \n", x[0], x[1], x[2]);
+  // printf("%s %s %s   \n", x[0], x[1], x[2]);
   execvp(x[0], x);
 }
