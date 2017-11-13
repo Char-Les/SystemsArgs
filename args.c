@@ -15,11 +15,10 @@
 */
 
 char ** parse_args(char * line){
-  char s1[30] = line;
   char ** args = calloc(5, sizeof(char *));;
   int i = 0;
-  while(i<5){
-    args[i] = strsep(&s1, " ");
+  while(i++ < 5){
+    args[i] = strsep(&line, " ");
     i++;
   }
   return args;
