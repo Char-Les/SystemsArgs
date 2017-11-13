@@ -19,7 +19,6 @@ char ** parse_args(char * line){
   int i = 0;
   while(i++ < 5){
     args[i] = strsep(&line, " ");
-    i++;
   }
   return args;
 }
