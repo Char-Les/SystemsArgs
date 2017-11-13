@@ -18,10 +18,10 @@
    char * line = x;
    char ** args = calloc(5, sizeof(char *));
    int i = 0;
-   while(line){
-     args[i] = (char *) strsep(&line, " ");
-     i++;
-   }
+   // while(line){
+   //   args[i] = (char *) strsep(&line, " ");
+   //   i++;
+   // }
    return args;
  }
 
