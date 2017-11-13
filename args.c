@@ -14,21 +14,19 @@
   HW 11 - Don't Get Argumentative
 */
 
- char ** parse_args( char * x ){
-   char *line = x;
-   char ** args = calloc(5, sizeof(char *));
-   int i = 0;
-   printf("while loop -------\n");
-   // while(line){
-   args[i] = strsep(&line, " ");
-   //   i++;
-   // }
-   printf("while end----------\n");
-   return args;
- }
+char ** parse_args(char * line){
+  char * s1 = line;
+  char ** args = calloc(5, sizeof(char *));;
+  int i = 0;
+  while(i<5){
+    args[i] = strsep(&s1, " ");
+    i++;
+  }
+  return args;
+}
 
 int main() {
-  // testing
+  // given tests
   char line[100] = "wow-this-is-cool";
   char *s1 = line;
   printf("[%s]\n", strsep(&s1, "-"));
