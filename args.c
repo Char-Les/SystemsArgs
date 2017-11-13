@@ -33,5 +33,5 @@ int main() {
   char test[] = "ls -a -l";
   char ** x = (char **) parse_args(test);
   printf("%s %s %s   \n", x[0], x[1], x[2]);
-  // execvp(x[0], x);
+  execvp(x[0], x);
 }
