@@ -31,7 +31,7 @@ int main() {
   // testing
   char line[100] = "wow-this-is-cool";
   char *s1 = line;
-  printf("[%s]\n", strsep( &s1, "-" ));
+  printf("[%s]\n", strsep(&s1, "-"));
   printf("[%s]\n", s1);
 
   char ** x = (char **) parse_args("ls -a -l");
