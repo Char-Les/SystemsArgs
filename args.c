@@ -18,7 +18,7 @@
    char * line = x;
    char ** args = calloc(5, sizeof(char *));
    int i = 0;
-   while(i < 5){
+   while(line){
      args[i] = (char *) strsep(&line, " ");
      i++;
    }
